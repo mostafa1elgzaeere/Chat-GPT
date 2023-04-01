@@ -1,0 +1,157 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+}
+.logo img{
+    height: 16px;
+    width: 62px;
+    padding: 2rem 4rem;
+    margin-left: 4rem;
+}
+.links{
+    display: flex;
+    flex:1;
+}
+.links p ,.sign a{
+    cursor: pointer;
+    padding: 0 .9rem ;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.sign{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.sign-up{
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+    width: 109px;
+    height: 50px;
+    text-align: center;
+    background: #FF4820;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5rem;
+    cursor: pointer;
+
+}
+
+.menu-icon{
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 0 4%;
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav{
+    display: none;
+    flex-direction: column;
+    background: wheat;
+    position: absolute;
+    top: 75px;
+    padding: 3%;
+    width: 130px;
+    right: 0;
+    background-color: rgb(27, 27, 46);
+    transition: .5s ease-in-out linear;
+}
+.mobile-nav p,.mobile-nav a{
+    color: white;
+    padding: 5%;
+    margin: 2% 0;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: .3px solid rgb(110, 110, 110);
+}
+
+
+/* keyframes */
+
+/* [1] to show mobile nav */
+.scale-up-ver-center {
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-timing-function: ease-in-out;
+
+        }
+
+ @-webkit-keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  
+
+/* media Query*/
+
+/* [1] hide links , sign from tablet and mobile (devices under 1050px) */
+
+@media screen and (max-width: 1050px) {
+    .navbar .links {
+        display: none;
+    }
+    .sign{
+        display: none;
+    }
+}
+
+/* [2] show menu-icon (devices under 1050px) */
+
+@media screen and (max-width: 1050px) {
+   .logo img{
+    height: 16px;
+    width: 62px;
+    padding: 2rem;
+    margin-left: 1rem;
+    }
+    .mobile-nav{
+        display: flex;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .sign-up {
+        width: 130px;
+    }
+
+}
+
+

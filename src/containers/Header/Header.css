@@ -1,0 +1,180 @@
+.header-parent{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+}
+
+/* left side */
+
+.header-container .side-info{
+    width: 60%;
+}
+.header-container .side-info h2{
+    font-family: var(--font-family);
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    padding-bottom: 5%;
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header-container .side-info > p{
+    width: 554px;
+    padding-bottom: 2%;
+    color: #81AFDD;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.getstated-form{
+    padding-top: 5%;
+    display: flex;
+    align-items: flex-end;
+}
+.getstated-form input{
+    width: 356px;
+    height: 60px;
+    background: #052D56;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 8%;
+    line-height: 27px;
+    color: #698fb6;
+}
+
+.getstated-form input::placeholder{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 8%;
+    line-height: 27px;
+    color: #3D6184;
+}
+.getstated-form button{
+    width: 164px;
+    height: 60px;
+    background: #FF4820;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+.header-parent .side-info .people{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5%;
+    align-items: center;
+    color: white;
+}
+.people p {
+    flex: 1;
+    font-size: 12px;
+    padding-left: 2%;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+/* right side */
+.ai-image-side img{
+    width: 120%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+/* bottom side */
+.header-partners{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* media query */
+
+
+/* [1] hide ai image form tablet and mobile ( devices under 1050 px) , make info side 90%*/
+
+@media screen and (max-width:1050px) {
+    .ai-image-side {
+        width: 30%;
+    }
+    .ai-image-side img{
+        width: 100%;
+        height: 60%;
+        float: right;
+        position: relative;
+    }
+    .side-info{
+        width: 70%;
+    }
+    .header-parent .side-info .people{
+        display: flex;
+        justify-content: space-between;
+        width: 130%;
+        padding-top: 5%;
+        align-items: center;
+        color: white;
+    }
+    .header-partners img{
+        width: 70px;
+        padding: 5%;
+    }
+
+}
+
+
+/* [2] remove ai image and modify text size in side-info */
+@media screen and (max-width:700px) {
+    .ai-image-side {
+        display: none;
+    }
+    .side-info {
+        width: 100% !important;
+    }
+    .side-info h2{
+        font-size: 30px !important;
+        line-height: 45px !important;
+    }
+    .side-info > p{
+        max-width: 100% !important;
+        font-size: 12px !important;
+        line-height: 18px !important;
+    }
+    .people{
+        width: 100% !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .people p{
+        font-size: 11px !important;
+        padding: 2%;
+    }
+    .header-partners img{
+        width: 50px;
+        padding: 5%;
+    }
+}
